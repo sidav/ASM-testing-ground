@@ -12,8 +12,10 @@ done
 
 echo
 
+mkdir build
+
 echo 'Using the GNU Linker (ld) on '$ext_trimmed_name'.o'
-ld -m elf_i386 -s $ext_trimmed_name.o -o $ext_trimmed_name 
+ld -m elf_i386 -s $ext_trimmed_name.o -o build/$ext_trimmed_name 
 
 echo 'Removing the '$ext_trimmed_name'.o'
 rm $ext_trimmed_name.o 
